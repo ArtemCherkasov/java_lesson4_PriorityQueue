@@ -6,10 +6,8 @@ public class PriorityQueueImpl<K extends Comparable<K>,T> implements PriorityQue
 	private int N = 0;
 
 	@SuppressWarnings("unchecked")
-	public PriorityQueueImpl(int N) {
-		
-		priorityQueue = (Node[]) new Comparable[N + 1];
-
+	public PriorityQueueImpl(int n) {
+		priorityQueue = new Node[n];
 	}
 	
 	public boolean isEmpty(){
@@ -48,8 +46,10 @@ public class PriorityQueueImpl<K extends Comparable<K>,T> implements PriorityQue
 
 	@Override
 	public void insert(K k, T t) {
-		priorityQueue[++N].setK(k);
-		priorityQueue[++N].setT(t);
+		Node<K, T> node = new Node<K, T>();
+		node.setK(k);
+		node.setT(t);
+		priorityQueue[++N] = node;
 		swim(N);
 	}
 	

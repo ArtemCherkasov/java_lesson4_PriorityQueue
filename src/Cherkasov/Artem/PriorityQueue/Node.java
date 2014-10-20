@@ -1,6 +1,6 @@
 package Cherkasov.Artem.PriorityQueue;
 
-public class Node<K, T> {
+public class Node<K, T>{
 	
 	private K k;
 	private T t;
