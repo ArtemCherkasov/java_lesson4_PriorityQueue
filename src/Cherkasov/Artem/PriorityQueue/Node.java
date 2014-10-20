@@ -5,6 +5,11 @@ public class Node<K, T>{
 	private K k;
 	private T t;
 	
+	public Node(K k, T t) {
+		this.k = k;
+		this.t = t;
+	}
+	
 	public K getK() {
 		return k;
 	}

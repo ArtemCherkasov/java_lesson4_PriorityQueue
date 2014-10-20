@@ -46,9 +46,7 @@ public class PriorityQueueImpl<K extends Comparable<K>,T> implements PriorityQue
 
 	@Override
 	public void insert(K k, T t) {
-		Node<K, T> node = new Node<K, T>();
-		node.setK(k);
-		node.setT(t);
+		Node<K, T> node = new Node<K, T>(k, t);
 		priorityQueue[++N] = node;
 		swim(N);
 	}
